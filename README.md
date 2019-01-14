@@ -49,3 +49,10 @@ $ pkill -f manet
 
 # LICENSE
 - [MIT LICENSE](/LICENSE)
+
+# Screenshots
+![YaManet Screenshot 01](yamanet_screenshot_01.png)
+
+![YaManet Screenshot 02](yamanet_screenshot_02.png)
+
+![YaManet Screenshot 03](yamanet_screenshot_03.png)
