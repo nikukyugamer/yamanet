@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/corselia/yamanet.svg?style=svg)](https://circleci.com/gh/corselia/yamanet)
+
 # YaManet
 **Yet another Manet**
 
@@ -10,7 +12,7 @@
 ## git clone and yarn install (npm install)
 ```bash
 $ git clone git@github.com:corselia/yamanet.git
-$ cd amanet
+$ cd yamanet
 $ yarn install
 ```
 
@@ -41,8 +43,9 @@ $ pkill -f manet
 ```
 
 # Note
-If you use OS X, perhaps it doesn't work correctly. Please refer a following issue.
-- https://github.com/nwjs-community/nw-builder/issues/75
+- If you use OS X, perhaps it doesn't work correctly. Please refer a following issue.
+    - https://github.com/nwjs-community/nw-builder/issues/75
+- If you user Raspberry Pi, maybe you cannot use `PhantomJS` because of ARM
 
 # LICENSE
 - [MIT LICENSE](/LICENSE)
