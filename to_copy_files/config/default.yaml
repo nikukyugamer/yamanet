@@ -1,0 +1,40 @@
+host: 0.0.0.0
+port: 8891
+cors: false
+ui: true
+
+silent: false
+level: info
+
+engine: phantomjs
+timeout: 60000
+compress: false
+cache: 3600 # seconds
+cleanupStartup: false
+cleanupRuntime: false
+storage: ./storage
+
+commands:
+  phantomjs:
+    linux: "npx phantomjs --ignore-ssl-errors=true --web-security=false"
+    darwin: "npx phantomjs --ignore-ssl-errors=true --web-security=false"
+
+whitelist:
+  - "*"
+
+options:
+  # width: 1234
+  # height: 1234
+  cookies:
+    - name: "COOKIE NAME"
+      value: 1
+      domain: ".example.com"
+      path: "/"
+      httponly: false
+      secure: false
+      expires: "2030-12-24T12:00:00.000Z"
+
+# security:
+#     basic:
+#        username: admin
+#        password: admin

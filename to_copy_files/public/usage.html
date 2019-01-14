@@ -1,0 +1,191 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/><![endif]-->
+    <meta name="author" content="Vladislav Bauer"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>YaManet</title>
+
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="css/pure-min.css">
+    <link rel="stylesheet" type="text/css" href="css/app.css">
+    <link rel="stylesheet" type="text/css" href="css/my_css.css">
+
+    <script type="text/javascript" src="js/zepto.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <h1><a href="./">YaManet</a></h1>
+        <h2>Get Screenshot!</h2>
+        <h3><a href="https://github.com/vbauer/manet" target="_blank">Powered by Manet</a></h3>
+    </div>
+
+    <div class="main">
+        <form class="pure-form pure-form-aligned" method="get" action="">
+            <fieldset>
+                <div class="pure-control-group">
+                    <label for="open">
+                        <button id="open" name="open" class="pure-button pure-button-primary" title="Capture screenshot">取得！</button>
+                    </label>
+                    <input id="address" name="address" type="text" readonly>
+                </div>
+
+                <br>
+                <hr>
+                <br>
+
+                <div class="pure-control-group">
+                    <label for="url">取得したいページのURL</label>
+                    <input id="url" name="url" type="text" placeholder="http://www.oh-ami.com/" maxlength="1024" autofocus>
+                </div>
+
+                <div class="pure-control-group">
+                    <label for="delay">取得待ち時間（表示が遅いページ用）</label>
+                    <input id="delay" name="delay" type="number" min="0" placeholder="ミリ秒単位なので1秒なら1000と入れて">
+                </div>
+
+                <br>
+                <hr>
+                <br>
+
+                <div class="pure-control-group">
+                    <label for="width">横のサイズ</label>
+                    <input id="width" name="width" type="number" min="0" placeholder="ピクセル数（無記入だと自動でいい感じになる）">
+                </div>
+
+                <div class="pure-control-group">
+                    <label for="height">縦のサイズ</label>
+                    <input id="height" name="height" type="number" min="0" placeholder="ピクセル数（無記入だと自動でいい感じになる）">
+                </div>
+
+                <div class="pure-control-group">
+                    <label for="zoom">ズームサイズ</label>
+                    <input id="zoom" name="zoom" type="number" step="0.01" min="0" placeholder="1.00">
+                </div>
+
+                <div class="pure-control-group">
+                    <label for="format">出力フォーマット</label>
+                    <select id="format" name="format">
+                        <!-- <option label="Default" selected></option> -->
+                        <option value="png" selected>PNG</option>
+                        <option value="jpg">JPG</option>
+                        <option value="pdf">PDF</option>
+                        <option value="html">HTML</option>
+                        <option value="bmp">BMP</option>
+                        <option value="ppm">PPM</option>
+                        <option value="ico">ICO</option>
+                    </select>
+                </div>
+
+                <br>
+                <hr>
+                <br>
+
+                <!-- See: https://github.com/laurentj/slimerjs/issues/259 -->
+                <!-- <div class="pure-control-group">
+                    <label for="quality">品質 (0-1)</label>
+                    <input id="quality" name="quality" type="number" step="0.01" min="0" max="1" placeholder="Quality">
+                </div> -->
+
+                <div class="pure-control-group">
+                    <label for="paperFormat">PDF出力での紙サイズ</label>
+                    <select id="paperFormat" name="paperFormat">
+                        <!-- <option label="Default" selected></option> -->
+                        <option value="A2" selected>A2判</option>
+                        <option value="A3">A3判</option>
+                        <option value="A4">A4判</option>
+                        <option value="A5">A5判</option>
+                        <option value="letter">レターサイズ</option>
+                    </select>
+                </div>
+
+                <div class="pure-control-group">
+                    <label for="paperOrientation">PDF出力での紙の向き</label>
+                    <select id="paperOrientation" name="paperOrientation">
+                        <!-- <option label="Default" selected></option> -->
+                        <option value="portrait" selected>縦</option>
+                        <option value="landscape">横</option>
+                    </select>
+                </div>
+
+                <br>
+                <hr>
+                <br>
+
+                <div class="pure-control-group">
+                    <label for="js" class="pure-checkbox">JavaScript を有効にする？</label>
+                    <input id="js" name="js" type="checkbox" checked>
+                </div>
+
+                <div class="pure-control-group">
+                    <label for="images" class="pure-checkbox">画像を取得する？</label>
+                    <input id="images" name="images" type="checkbox" checked>
+                </div>
+
+                <br>
+                <hr>
+                <br>
+
+                <div class="pure-control-group">
+                    <label for="selectorCrop" class="pure-checkbox">DOM要素で画像を切り抜く？</label>
+                    <input id="selectorCrop" name="selectorCrop" type="checkbox">
+                </div>
+                <div class="pure-control-group">
+                    <label for="selector">切り抜く場合はDOM要素を指定</label>
+                    <input id="selector" name="selector" type="text" maxlength="1024" placeholder="CSSセレクタで指定してくれ">
+                </div>
+                <div class="pure-control-group">
+                    <!-- これを指定するとめっちゃ時間がかかる -->
+                    <label for="selectorCropPadding">切り抜く対象範囲をどれだけ外側に広げるか</label>
+                    <input id="selectorCropPadding" name="selectorCropPadding" type="number" placeholder="0">
+                </div>
+
+                <!-- <div class="pure-control-group">
+                    <label for="callback">コールバック URL</label>
+                    <input id="callback" name="callback" type="text" maxlength="1024" placeholder="URL">
+                </div> -->
+
+                <div class="pure-control-group">
+                    <label for="agent">ブラウザ名称</label>
+                    <input id="agent" name="agent" type="text" maxlength="1024" placeholder="指定したい場合は入れてくれ">
+                </div>
+
+                <!-- <div class="pure-control-group">
+                    <label for="user">User name</label>
+                    <input id="user" name="user" type="text" maxlength="256" placeholder="User">
+                </div>
+
+                <div class="pure-control-group">
+                    <label for="password">Password</label>
+                    <input id="password" name="password" type="text" maxlength="256" placeholder="Password">
+                </div> -->
+
+                <!-- <div class="pure-control-group">
+                    <label for="headers">Headers</label>
+                    <input id="headers" name="headers" type="text" maxlength="1024" placeholder="Format: key1=value1;key2=value2;...">
+                </div> -->
+
+                <!-- <div class="pure-control-group">
+                    <label for="clipRect">Clip rectangle</label>
+                    <input id="clipRect" name="clipRect" type="text" maxlength="1024" placeholder="Format: top,left,width,height">
+                </div> -->
+
+                <!-- <div class="pure-control-group">
+                    <label for="engine">Engine</label>
+                    <select id="engine" name="engine">
+                        <option label="Default" selected></option>
+                        <option value="phantomjs">PhantomJS</option>
+                        <option value="slimerjs">SlimerJS</option>
+                    </select>
+                </div> -->
+
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>
