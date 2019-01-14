@@ -45,7 +45,7 @@ $ pkill -f manet
 # Note
 - If you use OS X, perhaps it doesn't work correctly. Please refer a following issue.
     - https://github.com/nwjs-community/nw-builder/issues/75
-- If you user Raspberry Pi, maybe you cannot use `PhantomJS` because of ARM
+- If you use Raspberry Pi, maybe you cannot use `PhantomJS` because of ARM
 
 # LICENSE
 - [MIT LICENSE](/LICENSE)
