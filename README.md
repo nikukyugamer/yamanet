@@ -43,9 +43,18 @@ $ pkill -f manet
 ```
 
 # Note
+- If you want to use Japanese or other language's font, you may install it as below in case of Japanese on Ubuntu
+
+```bash
+$ sudo apt-get install fontconfig
+$ wget --content-disposition IPAfont00303.zip http://ipafont.ipa.go.jp/old/ipafont/IPAfont00303.php
+$ sudo unzip IPAfont00303.zip -d /usr/share/fonts/
+$ sudo fc-cache -fv
+```
+
 - If you use OS X, perhaps it doesn't work correctly. Please refer a following issue.
     - https://github.com/nwjs-community/nw-builder/issues/75
-- If you use Raspberry Pi, maybe you cannot use `PhantomJS` because of ARM
+- If you use Raspberry Pi, maybe you cannot use `PhantomJS` because its architecture is ARM
 
 # LICENSE
 - [MIT LICENSE](/LICENSE)
