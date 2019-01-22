@@ -56,6 +56,9 @@ $ sudo fc-cache -fv
     - https://github.com/nwjs-community/nw-builder/issues/75
 - If you use Raspberry Pi, maybe you cannot use `PhantomJS` because its architecture is ARM
 
+# CAUTION
+If you use a low spec cpu or/and you access to `YaManet` by multiple web browsers's tabs, it may hang up. In my case, when I use a [Lightsail](https://aws.amazon.com/jp/lightsail/pricing/) 512MB plan, that's so. I assume the reason is a problem of `PhantomJS` but it is no longer maintenanced.
+
 # LICENSE
 - [MIT LICENSE](/LICENSE)
 
