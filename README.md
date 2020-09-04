@@ -1,4 +1,6 @@
 <!-- [![CircleCI](https://circleci.com/gh/corselia/yamanet.svg?style=svg)](https://circleci.com/gh/corselia/yamanet) -->
+# PhantomJS is now obsolete so this repository is frozen
+
 # YaManet
 **Yet another Manet**
 
