@@ -1,11 +1,11 @@
 {
   "dependencies": {
-    "imagemin": "^7.0.1",
-    "imagemin-gifsicle": "^6.0.0",
-    "imagemin-jpegtran": "^6.0.0",
-    "imagemin-optipng": "^7.1.0",
-    "imagemin-svgo": "^7.0.0",
-    "manet": "^0.4.23",
-    "phantomjs2": "^2.2.0"
+    "imagemin": ">=7.0.1",
+    "imagemin-gifsicle": ">=6.0.0",
+    "imagemin-jpegtran": ">=6.0.0",
+    "imagemin-optipng": ">=7.1.0",
+    "imagemin-svgo": ">=7.0.0",
+    "manet": ">=0.4.23",
+    "phantomjs2": ">=2.2.0"
   }
 }

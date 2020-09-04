@@ -1,5 +1,4 @@
-[![CircleCI](https://circleci.com/gh/corselia/yamanet.svg?style=svg)](https://circleci.com/gh/corselia/yamanet)
-
+<!-- [![CircleCI](https://circleci.com/gh/corselia/yamanet.svg?style=svg)](https://circleci.com/gh/corselia/yamanet) -->
 # YaManet
 **Yet another Manet**
 
